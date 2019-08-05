@@ -22,8 +22,7 @@ public class HomeController {
 	public ModelAndView mainGet(ModelAndView mv) throws Exception{
 	    
 		mv.setViewName("/main/home");
-	    mv.addObject("setHeader", "타일즈");
-	    return mv;
+	     return mv;
 	}
 	
 	@RequestMapping(value= "/", method = RequestMethod.POST)
