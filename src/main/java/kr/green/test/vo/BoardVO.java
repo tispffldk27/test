@@ -46,6 +46,14 @@ public class BoardVO {
 	public String getFile() {
 		return file;
 	}
+	public String getFileName() {
+		if(file == null) 
+			return "";
+		int index = file.indexOf("_");
+		if(index ==-1)
+			return "";
+		return file.substring(index+1);
+	}
 	public void setFile(String file) {
 		this.file = file;
 	}
