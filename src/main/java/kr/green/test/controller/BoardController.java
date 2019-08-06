@@ -2,6 +2,8 @@ package kr.green.test.controller;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,6 +56,28 @@ public class BoardController {
 		mv.addObject("cri",cri);
 	    return mv;
 	}	
-
+	@RequestMapping(value= "/board/modify", method = RequestMethod.GET)
+	public ModelAndView boardModifyGet(ModelAndView mv,Integer num, Criteria cri,HttpServletRequest r) {
+	    boolean isWriter = boardService.isWriter(num,r);
+	    BoardVO board =null;
+	    if(isWriter) {
+	    	 board = boardService.getBoardList(num);
+	    	 mv.setViewName("/board/modify");
+	    }else {
+	    	
+	    	mv.setViewName("redirect:/board/list");
+	    }
+	 
+		
+		mv.addObject("board",board);
+		mv.addObject("cri",cri);
+	    return mv;
+	}	
+	@RequestMapping(value= "/board/modify", method = RequestMethod.POST)
+	public String boardModifyPost(BoardVO bVo,HttpServletRequest r) {
+		if(boardService.isWriter(bVo.getNum(), r))
+		boardService.modifyBoard(bVo);
+	    return "redirect:/board/list";
+	}	
 	
 }

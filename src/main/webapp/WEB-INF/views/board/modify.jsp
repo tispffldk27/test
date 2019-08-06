@@ -6,15 +6,16 @@
 </head>    
 <div style="min-height:561px;">
  <h1>게시글 등록</h1>
- <form method="post" action="<%=request.getContextPath()%>/board/register">
+ <form method="post" action="<%=request.getContextPath()%>/board/modify">
+ 	<input type="hidden" value="${board.num}" name="num">
   	<div class="form-group">
-	  <input type="text" class="form-control" name="title" placeholder="제목">
+	  <input type="text" class="form-control" name="title" value="${board.title}">
 	</div>
 	<div class="form-group">
-	  <input type="text" class="form-control" name="writer" value="${user.id}">
+	  <input type="text" class="form-control" name="writer" value="${board.writer}" readonly>
 	</div>
-	<textarea id="summernote" name="contents"></textarea>
-	<button type="submit" class="btn btn-info">등록</button>
+	<textarea id="summernote" name="contents">${board.contents}</textarea>
+	<button type="submit" class="btn btn-info">수정하기</button>
  </form>
 </div>
  <script>
