@@ -41,7 +41,7 @@
       <tr>
         <td>${board.num}</td>
         <td>
-         <a href="<%=request.getContextPath()%>/board/display?num=${board.num}">
+         <a href="<%=request.getContextPath()%>/board/display?num=${board.num}&page=${pageMaker.criteria.page}&type=${pageMaker.criteria.type}&search=${pageMaker.criteria.search}">
                 ${board.title}
         </a>
         </td>

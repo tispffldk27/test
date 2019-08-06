@@ -13,5 +13,7 @@ public interface BoardDAO {
 	public int selectCountBoardList(@Param("cri")Criteria cri,@Param("valid")String valid);
 
 	public void insertBoard(@Param("board")BoardVO board);
+
+	public BoardVO selectBoard(@Param("num")Integer num);
 	
 }
