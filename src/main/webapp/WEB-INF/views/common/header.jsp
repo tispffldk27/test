@@ -21,7 +21,7 @@
 	    	</ul>
 		</div> 
 		<c:if test="${user ne null}">
-		<a href="<%=request.getContextPath()%>/signout" class="float-right">로그아웃</a>
+			<a href="<%=request.getContextPath()%>/signout" class="float-right">로그아웃</a>
 		</c:if>
 	</div> 
 </nav>

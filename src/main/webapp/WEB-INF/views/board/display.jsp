@@ -24,14 +24,14 @@
    ${board.contents}
    </div>
    <div class="form-group">
-	<label>첨부파일</label>
+	<label>첨부파일 :</label>
 	<c:if test="${board.fileName ne '' }">
 	<a href="<%=request.getContextPath()%>/board/download?fileName=${board.file}">
 	 ${board.fileName}
 	 </a>
 	</c:if>
 	<c:if test="${board.fileName eq '' }">
-	   없음
+	 없음
 	</c:if>
    </div>
    <div>
