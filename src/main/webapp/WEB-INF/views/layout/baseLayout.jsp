@@ -9,8 +9,12 @@
 <jsp:include page="/WEB-INF/views/include/head.jsp"></jsp:include>
 </head>
 <body>
+	<!-- 로그인,회원가입,이미지로고 -->
     <tiles:insertAttribute name="header"/>
-    <div class="container">        
+    <!-- 메뉴창 -->
+    <tiles:insertAttribute name="menu"/>
+    <div class="container">
+    	<!-- 중앙 사진기제  -->        
         <tiles:insertAttribute name="body" />
     </div>                                                  
     <tiles:insertAttribute name="footer" />
