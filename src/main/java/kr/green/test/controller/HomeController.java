@@ -26,7 +26,10 @@ public class HomeController {
 	@RequestMapping(value= "/", method = RequestMethod.GET)
 	public ModelAndView mainGet(ModelAndView mv) throws Exception{
 	    
-		
+		/*기준이 A인 제품들의 리트스를 가져와서 mv에 실어줌
+		ArrayList<xxVO> list = xxxService.getList(A);
+		mv.addObject("list", list);
+		*/
 		mv.setViewName("/main/home");
 	    return mv;
 	}
@@ -175,15 +178,18 @@ public class HomeController {
 	//best 창
 	@RequestMapping(value= "/menu/menu2/best", method = RequestMethod.GET)
 	public ModelAndView bestGet(ModelAndView mv) throws Exception{
-	
-		mv.setViewName("/menu/menu2/best");
+		/*기준이 best인 제품들의 리트스를 가져와서 mv에 실어줌
+		ArrayList<xxVO> list = xxxService.getList(Best);
+		mv.addObject("list", list);
+		*/
+		mv.setViewName("/main/home");
 		
 		return mv;
 	}
 	@RequestMapping(value= "/menu/menu2/best", method = RequestMethod.POST)
 	public ModelAndView bestPost(ModelAndView mv) throws Exception{
-	
-		mv.setViewName("/menu/menu2/best");
+		
+		mv.setViewName("/main/menu2/best");
 		
 		return mv;
 	}
@@ -191,7 +197,7 @@ public class HomeController {
 	@RequestMapping(value= "/menu/menu2/new", method = RequestMethod.GET)
 	public ModelAndView newGet(ModelAndView mv) throws Exception{
 	
-		mv.setViewName("/menu/menu2/new");
+		mv.setViewName("/main/home");
 		
 		return mv;
 	}
@@ -206,7 +212,7 @@ public class HomeController {
 	@RequestMapping(value= "/menu/menu2/codiset", method = RequestMethod.GET)
 	public ModelAndView codisetGet(ModelAndView mv) throws Exception{
 	
-		mv.setViewName("/menu/menu2/codiset");
+		mv.setViewName("/main/home");
 		return mv;
 	}
 	@RequestMapping(value= "/menu/menu2/codiset", method = RequestMethod.POST)
@@ -219,7 +225,7 @@ public class HomeController {
 	@RequestMapping(value= "/menu/menu2/top", method = RequestMethod.GET)
 	public ModelAndView topGet(ModelAndView mv) throws Exception{
 	
-		mv.setViewName("/menu/menu2/top");
+		mv.setViewName("/main/home");
 		return mv;
 	}
 	@RequestMapping(value= "/menu/menu2/top", method = RequestMethod.POST)

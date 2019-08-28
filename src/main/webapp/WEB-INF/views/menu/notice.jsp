@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항</title>
+<title>고객만족센터</title>
 </head>
 <body>
 <form method="post" action="<%=request.getContextPath()%>/">
-		<h2>공지사항테스트</h2>
+		<h2>고객만족센터</h2>
 
 
 </form>

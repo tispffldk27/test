@@ -15,7 +15,9 @@
     text-decoration: none;
 }
 .container {
-    min-width: 1100px;
+    min-width: 1100px; 
+   
+   
 }
 .main-top{
     width: 100%;
@@ -47,7 +49,7 @@
   
 }
 .main-mid {
-    width: 1300px;
+    /* width: 1300px; */
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
@@ -57,6 +59,7 @@
     height: 58px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #ddd;
+    
 }
 .main-bottombox {
     width: 1300px;
@@ -72,6 +75,10 @@
     font-size: 14px;
    
 }
+.main-bottombox .main-ul{
+   margin-bottom: 0;
+    margin-top: 0;
+}
 .main-bottombox .btbox a {
  
     font-family: 'Roboto', sans-serif;
@@ -82,9 +89,9 @@
 	<!-- ★CSS관련 -->
 </style>
 <body>
-<form method="post" action="<%=request.getContextPath()%>/">
+
 	<!-- 전체백그라운드 -->
-<div class="container">  
+<div class="">  
    <!-- 메인 header  -->
     <div id="header">
         <!-- 메인 탑-->
@@ -96,30 +103,30 @@
     <!-- 메인 바텀 맨밑-->
         <div class="main-bottom">
             <div class="main-bottombox">
-                <ul>
+                <ul class="main-ul">
                     <!-- 첫번째 -->
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/best">BEST</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/new">NEW~20%</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/codiset">CODISET</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/top">TOP</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/pants">PANTS</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/shirts">SHIRTS</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/outer">OUTER</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/shoes">SHOES</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/bag">BAG</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/life">LIFE</li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/big">BIG</li>
-                        <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/delivery">당일배송</li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/best">BEST</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/new">NEW~20%</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/codiset">CODISET</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/top">TOP</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/pants">PANTS</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/shirts">SHIRTS</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/outer">OUTER</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/shoes">SHOES</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/bag">BAG</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/life">LIFE</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/big">BIG</a></li>
+                        <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/delivery">당일배송</a></li>
                             <!-- 검색기능 아직미구현 -->
-                        <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/search">검색기능</li>
+                        <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/search">검색기능</a></li>
                 </ul>
             </div>
         </div>
-    </div>
+    </div>	
 </div>
 	
 	
 	
-</form>
+
 </body>
 </html>

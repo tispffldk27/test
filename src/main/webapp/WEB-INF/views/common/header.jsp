@@ -17,7 +17,7 @@
 		        	<a class="nav-link" href="<%=request.getContextPath()%>/board/list">게시판</a>
 		      	</li>
 		      	<li class="nav-item">
-		        	<a class="nav-link" href="<%=request.getContextPath()%>/menu/notice">공지사항</a>
+		        	<a class="nav-link" href="<%=request.getContextPath()%>/menu/notice">고객만족센터</a>
 		      	</li>
 		      	<li class="nav-item">
 		        	<a class="nav-link" href="<%=request.getContextPath()%>/menu/event">이벤트</a>
