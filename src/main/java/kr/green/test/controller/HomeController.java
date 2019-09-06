@@ -1,8 +1,5 @@
 package kr.green.test.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.green.test.service.ItemListService;
 import kr.green.test.service.MemberService;
 import kr.green.test.vo.MemberVO;
 
@@ -22,10 +20,11 @@ import kr.green.test.vo.MemberVO;
 public class HomeController {
 	@Autowired
 	MemberService memberService;
-	
+	@Autowired
+	ItemListService itemService;
 	@RequestMapping(value= "/", method = RequestMethod.GET)
 	public ModelAndView mainGet(ModelAndView mv) throws Exception{
-	    
+	    System.out.println(itemService.getItemName(1));
 		/*기준이 A인 제품들의 리트스를 가져와서 mv에 실어줌
 		ArrayList<xxVO> list = xxxService.getList(A);
 		mv.addObject("list", list);

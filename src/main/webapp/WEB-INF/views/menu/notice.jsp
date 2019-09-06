@@ -8,7 +8,7 @@
 </head>
 <body>
 <form method="post" action="<%=request.getContextPath()%>/">
-		<h2>고객만족센터</h2>
+	
 
 
 </form>
