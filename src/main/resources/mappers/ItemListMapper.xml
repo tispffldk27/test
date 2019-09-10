@@ -6,6 +6,10 @@
   <select id="getItemName" resultType="String">
     SELECT itemname FROM university.itemlist where itemnum = #{itemnum};
   </select>
+  
+  <select id="getItemList" resultType="kr.green.test.vo.ItemListVO">
+    SELECT * FROM university.itemlist;
+  </select>
 </mapper>
 
 

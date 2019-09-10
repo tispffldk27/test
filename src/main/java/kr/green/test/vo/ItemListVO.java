@@ -5,7 +5,7 @@ public class ItemListVO {
 	private int itemgroup;
 	private String itemname;
 	private String itemcontent;
-	private int itemsun; 
+	private int itemsum; 
 	private int itemvolume;
 	private String itemfile;
 	private String valid;
@@ -34,11 +34,11 @@ public class ItemListVO {
 	public void setItemcontent(String itemcontent) {
 		this.itemcontent = itemcontent;
 	}
-	public int getItemsun() {
-		return itemsun;
+	public int getItemsum() {
+		return itemsum;
 	}
-	public void setItemsun(int itemsun) {
-		this.itemsun = itemsun;
+	public void setItemsum(int itemsum) {
+		this.itemsum = itemsum;
 	}
 	public int getItemvolume() {
 		return itemvolume;
@@ -69,7 +69,7 @@ public class ItemListVO {
 	@Override
 	public String toString() {
 		return "ItemListVO [itemnum=" + itemnum + ", itemgroup=" + itemgroup + ", itemname=" + itemname
-				+ ", itemcontent=" + itemcontent + ", itemsun=" + itemsun + ", itemvolume=" + itemvolume + ", itemfile="
+				+ ", itemcontent=" + itemcontent + ", itemsum=" + itemsum + ", itemvolume=" + itemvolume + ", itemfile="
 				+ itemfile + ", valid=" + valid + ", itemregistered=" + itemregistered + "]";
 	}
 

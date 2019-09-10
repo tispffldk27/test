@@ -1,5 +1,7 @@
 package kr.green.test.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import kr.green.test.service.ItemListService;
 import kr.green.test.service.MemberService;
+import kr.green.test.vo.ItemListVO;
 import kr.green.test.vo.MemberVO;
 
 
@@ -24,11 +27,15 @@ public class HomeController {
 	ItemListService itemService;
 	@RequestMapping(value= "/", method = RequestMethod.GET)
 	public ModelAndView mainGet(ModelAndView mv) throws Exception{
-	    System.out.println(itemService.getItemName(1));
+	    System.out.println(itemService.getItemName(2));
+	    
+	    
+	    ArrayList<ItemListVO> list = itemService.getItemList();
 		/*기준이 A인 제품들의 리트스를 가져와서 mv에 실어줌
 		ArrayList<xxVO> list = xxxService.getList(A);
 		mv.addObject("list", list);
 		*/
+	    mv.addObject("list", list);
 		mv.setViewName("/main/home");
 	    return mv;
 	}
@@ -233,6 +240,33 @@ public class HomeController {
 		mv.setViewName("/menu/menu2/top");
 		return mv;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@RequestMapping(value= "/itemlist/itemlist", method = RequestMethod.GET)
+	public ModelAndView ItemListGet(ModelAndView mv) throws Exception{
+	
+		mv.setViewName("/itemlist/itemlist");
+		return mv;
+	}
+	
+	
+	
+	
 	
 	
 	

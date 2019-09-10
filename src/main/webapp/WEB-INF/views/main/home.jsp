@@ -57,6 +57,7 @@ h1 {
 .content {
   background-color: white;
   padding: 10px;
+  
 }
 
 /* The "show" class is added to the filtered elements */
@@ -81,6 +82,7 @@ h1 {
   background-color: #666;
   color: white;
 }
+
 </style>
 </head>
 <body>
@@ -92,6 +94,19 @@ h1 {
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
+	<c:forEach items="${list}" var="item">
+		<a href="<%=request.getContextPath()%>/itemlist/itemlist?num=${item.itemnum}">
+		<div class="column nature">
+			<div class="content">
+				<img src="<%=request.getContextPath()%>/resources${item.itemfile}" alt="Mountains" width="302px" height="302px">
+				<h4 align="center">${item.itemname }</h4>
+				<p align="center">${item.itemcontent }</p>
+				<p align="right">${item.itemsum }원</p>
+			</div>
+		</div>
+	
+	</c:forEach>
+<%-- 
   <div class="column nature">
     <div class="content">
       <img src="<%=request.getContextPath()%>/resources/img/1.jpg" alt="Mountains" style="width:100%">
@@ -157,7 +172,7 @@ h1 {
       <h4>Woman</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
-  </div>
+  </div> --%>
 <!-- END GRID -->
 </div>
 
