@@ -188,14 +188,17 @@ public class HomeController {
 		ArrayList<xxVO> list = xxxService.getList(Best);
 		mv.addObject("list", list);
 		*/
-		mv.setViewName("/main/home");
+		  ArrayList<ItemListVO> list = itemService.getItemList();
+			
+		mv.addObject("list", list);
+		mv.setViewName("/menu/menu2/best");
 		
 		return mv;
 	}
 	@RequestMapping(value= "/menu/menu2/best", method = RequestMethod.POST)
 	public ModelAndView bestPost(ModelAndView mv) throws Exception{
 		
-		mv.setViewName("/main/menu2/best");
+		mv.setViewName("/menu/menu2/best");
 		
 		return mv;
 	}

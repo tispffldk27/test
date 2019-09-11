@@ -86,7 +86,7 @@ h1 {
 </style>
 </head>
 <body>
-
+<h2 align="center">${item.itemname }</h2>
 <!-- MAIN (Center website) -->
 <div class="main">
 
@@ -95,13 +95,15 @@ h1 {
 <!-- Portfolio Gallery Grid -->
 <div class="row">
 	<c:forEach items="${list}" var="item">
-		<a href="<%=request.getContextPath()%>/itemlist/itemlist?num=${item.itemnum}">
+		
 		<div class="column nature">
 			<div class="content">
-				<img src="<%=request.getContextPath()%>/resources${item.itemfile}" alt="Mountains" width="302px" height="302px">
-				<h4 align="center">${item.itemname }</h4>
-				<p align="center">${item.itemcontent }</p>
-				<p align="right">${item.itemsum }원</p>
+				<a href="<%=request.getContextPath()%>/itemlist/itemlist?num=${item.itemnum}">
+					<img src="<%=request.getContextPath()%>/resources${item.itemfile}" alt="Mountains" width="302px" height="302px">
+					<h4 align="center">${item.itemname }</h4>
+					<p align="center"><a>${item.itemcontent }</a></p>
+					<p align="right"><a>${item.itemsum }원</a></p>
+				</a>
 			</div>
 		</div>
 	
