@@ -10,6 +10,12 @@
   <select id="getItemList" resultType="kr.green.test.vo.ItemListVO">
     SELECT * FROM university.itemlist;
   </select>
+  
+  <select id="getItemgroup" resultType="kr.green.test.vo.ItemListVO">
+    SELECT * FROM university.itemlist where itemgroup = #{group};
+  </select>
+  
+  
 </mapper>
 
 

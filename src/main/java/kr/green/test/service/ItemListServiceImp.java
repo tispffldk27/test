@@ -23,5 +23,12 @@ public class ItemListServiceImp implements ItemListService {
 		// TODO Auto-generated method stub
 		return itemlistDao.getItemList();
 	}
+
+	@Override
+	public ArrayList<ItemListVO> getItemgroup(int group) {
+		// TODO Auto-generated method stub
+		return itemlistDao.getItemgroup(group);
+	}
+	
 }
 

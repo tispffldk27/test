@@ -97,8 +97,10 @@
         <!-- 메인 탑-->
      
      <!--메인 미드 센터 이미지-->
-        <div class="main-mid">
+        <div class="main-mid btbox">
+      		<a href="<%=request.getContextPath()%>/">
             <img src="http://cdn2-aka.makeshop.co.kr/design/jogunshop/MakeshopRenewal/img/logo.gif">
+            </a>
         </div>
     <!-- 메인 바텀 맨밑-->
         <div class="main-bottom">
@@ -114,7 +116,7 @@
                     <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/outer">OUTER</a></li>
                     <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/shoes">SHOES</a></li>
                     <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/bag">BAG</a></li>
-                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/life">LIFE</a></li>
+                    <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/acc">ACC</a></li>
                     <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/big">BIG</a></li>
                         <li class="btbox"><a href="<%=request.getContextPath()%>/menu/menu2/delivery">당일배송</a></li>
                             <!-- 검색기능 아직미구현 -->

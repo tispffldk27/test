@@ -86,7 +86,7 @@ h1 {
 </style>
 </head>
 <body>
-<h2 align="center"    alt=" margin: 0px auto 40px">BEST 상품</h2>
+<h2 align="center"    alt=" margin: 0px auto 40px">shirts</h2>
 <h2 align="center">${item.itemname }</h2>
 <!-- MAIN (Center website) -->
 <div class="main">

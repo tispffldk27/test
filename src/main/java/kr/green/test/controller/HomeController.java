@@ -28,7 +28,7 @@ public class HomeController {
 	@RequestMapping(value= "/", method = RequestMethod.GET)
 	public ModelAndView mainGet(ModelAndView mv) throws Exception{
 	    System.out.println(itemService.getItemName(2));
-	    
+	   
 	    
 	    ArrayList<ItemListVO> list = itemService.getItemList();
 		/*기준이 A인 제품들의 리트스를 가져와서 mv에 실어줌
@@ -233,8 +233,10 @@ public class HomeController {
 	//TOP 탑
 	@RequestMapping(value= "/menu/menu2/top", method = RequestMethod.GET)
 	public ModelAndView topGet(ModelAndView mv) throws Exception{
-	
-		mv.setViewName("/main/home");
+		ArrayList<ItemListVO> list = itemService.getItemgroup(100);
+		System.out.println(itemService.getItemgroup(100));
+		mv.addObject("list", list);
+		mv.setViewName("/menu/menu2/top");
 		return mv;
 	}
 	@RequestMapping(value= "/menu/menu2/top", method = RequestMethod.POST)
@@ -243,6 +245,121 @@ public class HomeController {
 		mv.setViewName("/menu/menu2/top");
 		return mv;
 	}
+	
+	//pants
+	@RequestMapping(value= "/menu/menu2/pants", method = RequestMethod.GET)
+	public ModelAndView pantsGet(ModelAndView mv) throws Exception{
+			ArrayList<ItemListVO> list = itemService.getItemgroup(200);
+			
+			mv.addObject("list", list);
+			mv.setViewName("/menu/menu2/pants");
+			return mv;
+	}
+	@RequestMapping(value= "/menu/menu2/pants", method = RequestMethod.POST)
+	public ModelAndView pantsPost(ModelAndView mv) throws Exception{
+		
+			mv.setViewName("/menu/menu2/pants");
+			return mv;
+	}
+	
+	//shirts
+	@RequestMapping(value= "/menu/menu2/shirts", method = RequestMethod.GET)
+	public ModelAndView shirtsGet(ModelAndView mv) throws Exception{
+			ArrayList<ItemListVO> list = itemService.getItemgroup(500);
+			
+			mv.addObject("list", list);
+			mv.setViewName("/menu/menu2/shirts");
+			return mv;
+	}
+	@RequestMapping(value= "/menu/menu2/shirts", method = RequestMethod.POST)
+	public ModelAndView shirtsPost(ModelAndView mv) throws Exception{
+		
+			mv.setViewName("/menu/menu2/shirts");
+			return mv;
+	}
+	
+	//outer
+	@RequestMapping(value= "/menu/menu2/outer", method = RequestMethod.GET)
+	public ModelAndView outerGet(ModelAndView mv) throws Exception{
+			ArrayList<ItemListVO> list = itemService.getItemgroup(600);
+			
+			mv.addObject("list", list);
+			mv.setViewName("/menu/menu2/outer");
+			return mv;
+	}
+	@RequestMapping(value= "/menu/menu2/outer", method = RequestMethod.POST)
+	public ModelAndView outerPost(ModelAndView mv) throws Exception{
+		
+			mv.setViewName("/menu/menu2/outer");
+			return mv;
+	}
+	
+	//shoes
+	@RequestMapping(value= "/menu/menu2/shoes", method = RequestMethod.GET)
+	public ModelAndView shoesGet(ModelAndView mv) throws Exception{
+				ArrayList<ItemListVO> list = itemService.getItemgroup(300);
+				
+				mv.addObject("list", list);
+				mv.setViewName("/menu/menu2/shoes");
+				return mv;
+		}
+	@RequestMapping(value= "/menu/menu2/shoes", method = RequestMethod.POST)
+	public ModelAndView shoesPost(ModelAndView mv) throws Exception{
+			
+				mv.setViewName("/menu/menu2/shoes");
+				return mv;
+		}
+	
+	//bag
+	@RequestMapping(value= "/menu/menu2/bag", method = RequestMethod.GET)
+	public ModelAndView bagGet(ModelAndView mv) throws Exception{
+					ArrayList<ItemListVO> list = itemService.getItemgroup(400);
+					
+					mv.addObject("list", list);
+					mv.setViewName("/menu/menu2/bag");
+					return mv;
+	}
+	@RequestMapping(value= "/menu/menu2/bag", method = RequestMethod.POST)
+	public ModelAndView bagPost(ModelAndView mv) throws Exception{
+				
+					mv.setViewName("/menu/menu2/bag	");
+					return mv;
+	}
+	
+	//acc
+	@RequestMapping(value= "/menu/menu2/acc", method = RequestMethod.GET)
+	public ModelAndView accGet(ModelAndView mv) throws Exception{
+					ArrayList<ItemListVO> list = itemService.getItemgroup(700);
+					
+					mv.addObject("list", list);
+					mv.setViewName("/menu/menu2/acc");
+					return mv;
+	}
+	@RequestMapping(value= "/menu/menu2/acc", method = RequestMethod.POST)
+	public ModelAndView accPost(ModelAndView mv) throws Exception{
+				
+					mv.setViewName("/menu/menu2/acc	");
+					return mv;
+	}
+	//big
+	@RequestMapping(value= "/menu/menu2/big", method = RequestMethod.GET)
+	public ModelAndView bigGet(ModelAndView mv) throws Exception{
+					ArrayList<ItemListVO> list = itemService.getItemgroup(800);
+					
+					mv.addObject("list", list);
+					mv.setViewName("/menu/menu2/big");
+					return mv;
+	}
+	@RequestMapping(value= "/menu/menu2/big", method = RequestMethod.POST)
+	public ModelAndView bigPost(ModelAndView mv) throws Exception{
+				
+					mv.setViewName("/menu/menu2/big	");
+					return mv;
+	}
+	
+		
+	
+	
 	
 	
 	

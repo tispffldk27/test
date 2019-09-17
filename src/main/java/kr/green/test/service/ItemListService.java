@@ -11,6 +11,7 @@ public interface ItemListService {
 	
 	public ArrayList<ItemListVO> getItemList();
 	
+	public ArrayList<ItemListVO> getItemgroup(int group);
 }
 
 
